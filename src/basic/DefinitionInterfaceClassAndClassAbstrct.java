@@ -1,6 +1,18 @@
 package basic;
 
-public class DefinitionInterfaceClassAndClassAbstrct {
+public class DefinitionInterfaceClassAndClassAbstrct implements IDefinitionInterface {
+
+	@Override
+	public String getDatabaseConect() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getTablesCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
 
@@ -25,13 +37,20 @@ abstract class DomElement {
 
 class Button extends DomElement {
 
+	Button () {
+		super();
+	}
+	
 	@Override
 	void onClick() {
-		// TODO Auto-generated method stub
 		System.out.println("Hizo click en un boton");
-		
 	}
 
+	@Override
+	public void setName(String name) {
+		super.setName(name);
+		System.out.println("Hello "+ name + ". Welcome to Java course");
+	}
 
 }
 
@@ -39,7 +58,6 @@ class TexBox extends DomElement {
 
 	@Override
 	void onClick() {
-		// TODO Auto-generated method stub
 		System.out.println("Hizo click en un TexBox");
 	}
 	

@@ -12,7 +12,8 @@ public class Basic {
 		
 		people2.setName("Analia");
 		people2.setSurname("Herrera");
-		
+				
+		people2.hablar(2);
 		
 		
 		System.out.println("name: " + people2.getName() + "\nsurname: "+ people2.getSurname());
