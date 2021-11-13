@@ -1,0 +1,24 @@
+rectangle "Diagramas de clases" {
+
+  class Session{
+    User user
+    Token login(username, password)
+    void logout(sessionId)
+    void forgotPassword(username, email)
+  }
+
+  class Publish {
+    Publication publiction
+    Publiction public(text, userId)
+    void deletePublication(publicationId)
+    Publication editPublication(publicationId, text)
+    Publication addComment(publicationId, text, userId)
+  }
+
+  class f {
+    RegisterFollow registerFollow
+    RegisterFollow followThem(userId)
+    void unFollowThem(userId)
+  }   
+
+}

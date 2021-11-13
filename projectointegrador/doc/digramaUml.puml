@@ -1,0 +1,69 @@
+rectangle "Modelo de datos" {
+
+  entity User {
+    id
+    username
+    password
+    type
+  }
+
+  entity Person{
+    id
+    name 
+    surname
+    avatar
+    born
+    document
+    typeDocument
+    userId
+  }
+
+  entity Address {
+    id
+    type
+    city 
+    address
+    number
+  }
+
+  entity RegisterFollow {
+    id
+    followAmountMe
+    followAmountThem
+    userId
+  }
+
+  entity Follow{
+    id
+    userId
+    followId
+  }
+  
+  entity Publication {
+    id
+    text
+    userId
+    datePublic
+  }
+
+  entity Comment {
+    id
+    publicationId
+    userId
+    comment
+    datePublic
+  }
+
+
+  Person --|> User
+  Person --{ Address
+
+  RegisterFollow --{ Follow
+
+  RegisterFollow --|> User
+  Follow --{ User
+
+  Publication --{ Comment
+  Publication --{ User
+
+}
